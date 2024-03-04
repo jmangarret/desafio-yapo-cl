@@ -1,0 +1,44 @@
+[
+    {
+        "operationName": "ResultsGird_v2",
+        "variables": {
+            "rows": 21,
+            "params": {
+                "page": 1,
+                "order": 2,
+                "operation_type_id": 2,
+                "property_type_id": [
+                    2
+                ],
+                "currencyID": 1,
+                "m2Currency": 2
+            },
+            "page": 1,
+            "source": 0
+        },
+        "query": "query ResultsGird_v2($rows: Int!, $params: SearchParamsInput!, $page: Int, $source: Int) {searchFast(params: $params, first: $rows, page: $page, source: $source)\n}\n"
+    },
+    {
+        "operationName": "searchUrl",
+        "variables": {
+            "params": {
+                "page": 1,
+                "order": 2,
+                "operation_type_id": 2,
+                "property_type_id": [
+                    2
+                ],
+                "currencyID": 1,
+                "m2Currency": 2
+            }
+        },
+        "query": "query searchUrl($params: SearchParamsInput!) {\n  searchUrl(params: $params) {\n    url\n    __typename\n  }\n}\n"
+    },
+    {
+        "operationName": "Estates",
+        "variables": {
+            "first": 100
+        },
+        "query": "query Estates($first: Int!) {\n  estates(first: $first) {\n    data {\n      id\n      country_id\n      name\n      order\n      __typename\n    }\n    __typename\n  }\n}\n"
+    }
+]
